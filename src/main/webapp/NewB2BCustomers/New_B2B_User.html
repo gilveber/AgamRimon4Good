@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>רישום משתמש חדש - אפליקציית b2b</title>
+</head>
+
+<style>
+    #heading1 {
+        text-align: center;
+        font-family: Arial, serif;
+        font-size: 40px;
+    }
+
+    #theForm {
+        align-items: center;
+        text-align: center;
+    }
+
+    .line1 {
+        align-items: center;
+        text-align: center;
+        font-family: Arial, serif;
+        font-size: 30px;
+    }
+</style>
+
+<script>
+    function getID() {
+        return new URLSearchParams(document.location.search).get('ID');
+    }
+
+    function getForm() {
+
+        document.getElementById("theForm").innerHTML = "    <form action=\"http://agamrimon.com/NewB2BCustomer?ID=" + getID() + "\"" + " method=\"get\" autocomplete=\"on\" >\n" +
+            "        <label for=\"email\"></label>\n" +
+            "        <input type=\"text\" id=\"email\" name=\"email\"><br>\n" +
+            "        <input type=\"hidden\" name=\"ID\" value=\""+getID()+"\"><br>\n" +
+            "        <input type=\"submit\" value=\"שלח\">\n" +
+            "    </form>";
+
+        return "";
+    }
+
+
+</script>
+
+<body onload="getForm()">
+
+<div id="heading1">שלום</div>
+<div class="line1"> כל מה שאנחנו צריכים בשלב הזה</div>
+<div class="line1">הוא המייל שלכם</div>
+<div class="line1">אנא הכניסו אותו לתיבה</div>
+<div class="line1">ולחצו על שלח</div>
+<br>
+
+<div id="theForm"></div>
+
+</body>
+
+<!--<script>-->
+
+<!--    document.getElementById('demo').innerHTML = getID();-->
+
+<!--    const request = new XMLHttpRequest();-->
+<!--    request.onreadystatechange = function () {-->
+<!--        if (this.readyState == 4 && this.status == 200) {-->
+<!--            document.getElementById("demo").innerHTML = request.responseText;-->
+<!--        }-->
+<!--    };-->
+<!--    request.open("GET", "GetB2BCustomerDetails", true);-->
+<!--    request.send();-->
+
+
+<!--</script>-->
+</html>

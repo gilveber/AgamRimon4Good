@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="AgamRimon4Good:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>AgamRimon4Good</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="AgamRimon-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="AgamRimon4Good:war exploded" />
+    </root>
+  </artifact>
+</component>
