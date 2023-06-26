@@ -50,10 +50,32 @@ public class B2BCustomer implements Serializable {
     private int desktopAppLaunched;
 
     @Column(columnDefinition = "boolean default false", name = "emailWasSent")
-    private int emailWasSent;
+    private boolean emailWasSent;
 
+    @Column(columnDefinition = "text", name = "passwordOnAmodat")
+    private String passwordOnAmodat;
 
     public B2BCustomer() {
+    }
+
+    @Override
+    public String toString() {
+        return "B2BCustomer{" +
+                "id=" + id +
+                ", customerCardCode=" + customerCardCode +
+                ", storeName='" + storeName + '\'' +
+                ", storeOwnerName='" + storeOwnerName + '\'' +
+                ", mobile='" + mobile + '\'' +
+                ", agentAssigned=" + agentAssigned +
+                ", smsWasSent=" + smsWasSent +
+                ", sendSMS=" + sendSMS +
+                ", email='" + email + '\'' +
+                ", emailOpened=" + emailOpened +
+                ", appInstalled=" + appInstalled +
+                ", desktopAppLaunched=" + desktopAppLaunched +
+                ", emailWasSent=" + emailWasSent +
+                ", passwordOnAmodat='" + passwordOnAmodat + '\'' +
+                '}';
     }
 
     public int getCustomerCardCode() {
@@ -154,12 +176,20 @@ public class B2BCustomer implements Serializable {
         this.desktopAppLaunched = desktopAppLaunched;
     }
 
-    public int getEmailWasSent() {
+    public boolean isEmailWasSent() {
         return emailWasSent;
     }
 
-    public void setEmailWasSent(int emailWasSent) {
+    public void setEmailWasSent(boolean emailWasSent) {
         this.emailWasSent = emailWasSent;
+    }
+
+    public String getPasswordOnAmodat() {
+        return passwordOnAmodat;
+    }
+
+    public void setPasswordOnAmodat(String passwordOnAmodat) {
+        this.passwordOnAmodat = passwordOnAmodat;
     }
 
 

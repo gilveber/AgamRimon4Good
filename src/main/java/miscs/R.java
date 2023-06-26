@@ -15,6 +15,7 @@ public class R {
 
         _Email_001("", "Email_001.html"),
         Agam_Logo("", "Agam-Logo.png"),
+        fd("", "fd.xls")
         ;
 
 
